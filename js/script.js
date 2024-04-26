@@ -15,12 +15,7 @@ function Book(title, author, pages, read) {
     }
 }
 
-function addBookToLibrary() {
-    var title = prompt("Title: ");
-    var author = prompt("Author: ");
-    var pages = parseInt(prompt("Pages: "));
-    var read = prompt("Read: ") === "true";
-    
+function addBookToLibrary() {    
     var book = new Book(title, author, pages, read);
     myLibrary.push(book);
 }
@@ -70,5 +65,3 @@ console.log(theHobbit.info());
 
 addBookToLibrary();
 displayLibrary();
-
-generateTable();
