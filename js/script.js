@@ -20,48 +20,11 @@ function addBookToLibrary() {
     myLibrary.push(book);
 }
 
-function displayLibrary() {
-    myLibrary.forEach(element => {
-        console.log(element);
-    });
+if (myLibrary.length === 0) {
+    let main = document.querySelector("main")
+    let div = document.createElement("div");
+    let text = document.createTextNode("The Library is empty...");
+    div.appendChild(text);
+    div.setAttribute("class", "empty-msg");
+    main.appendChild(div);
 }
-
-function generateTable() {
-    const tbl = document.createElement("table");
-    tbl.setAttribute("id", "table-container");
-    let tblHead = document.createElement("thead");
-    const tblBody = document.createElement("tbody");
-
-    // head of the table
-    let hRow = document.createElement("tr");
-    for (let key of Object.keys(myLibrary[0]).filter(key => key !== "info")) {
-        let th = document.createElement("th");
-        let text = document.createTextNode(key);
-        th.appendChild(text);
-        hRow.appendChild(th);
-    }
-    tblHead.appendChild(hRow);
-    tbl.appendChild(tblHead);
-
-    // body of the table
-    myLibrary.forEach(element => {
-        let row = document.createElement("tr");
-        for (let key of Object.keys(myLibrary[0]).filter(key => key !== "info")) {
-            let td = document.createElement("td");
-            let text = document.createTextNode(`${element[key]}`);
-            td.appendChild(text);
-            row.appendChild(td);
-        }
-        tblBody.appendChild(row);
-    });
-
-    tbl.appendChild(tblBody);
-    document.body.appendChild(tbl);
-    tbl.setAttribute("border", "2");
-}
-
-theHobbit = new Book("The Hobbit", "H.R.R.", 295, false);
-console.log(theHobbit.info());
-
-addBookToLibrary();
-displayLibrary();

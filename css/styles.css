@@ -190,3 +190,11 @@ legend {
     background-color: var(--light-green);
     margin: 100px 20px 5px;
 }
+
+/* Books */
+
+.empty-msg {
+    font-size: 30px;
+    text-align: center;
+    margin: 50px auto;
+}

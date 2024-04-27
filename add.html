@@ -21,8 +21,60 @@
         </nav>
     <hr>
     </header> 
-    <footer>
-        <hr>
-    </footer>
+    <main>
+        <div class = "books-grid" id = "booksGrid"></div>
+    </main>
+
+        <form class = "add-book-form" id = "addBookForm">
+            <fieldset>
+                <legend>Book</legend>
+                <label for="title">Title:</label>
+                <input
+                    class = "input"
+                    type = "text"
+                    name = "title"
+                    id = "title"
+                    placeholder = "Title"
+                    required 
+                    maxlength = "100"
+                />
+                
+                <label for = "author">Author:</label>
+                <input
+                    class = "input"
+                    type = "text"
+                    name = "author"
+                    id = "author"
+                    placeholder = "Author"
+                    required
+                    maxlength = "100"
+                />
+                
+                <label for = "pages">Pages:</label>
+                <input
+                    class = "input"
+                    type = "number"
+                    name = "pages"
+                    id = "pages"
+                    placeholder = "Pages"
+                    required
+                    max = "5000"
+                />
+    
+                <div class = "read">
+                    <label for = "read">Read:</label>
+                    <input class = "checkbox" type = "checkbox" id = "read" name = "read" />
+                </div>
+                
+                <div class = submit-btn>
+                    <button class = "btn btn-light-green" type = "submit">
+                        Submit
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+        <footer>
+            <hr>
+        </footer>
 </body>
 </html>
