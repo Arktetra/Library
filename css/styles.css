@@ -38,8 +38,14 @@ body {
 nav {
     display: flex;
     gap: 8px;
+    height: 100px;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.lib {
+    font-size: 30px;
+    margin-left: 1vw;
 }
 
 .nav-btn:hover {
@@ -50,6 +56,12 @@ nav {
     background-color: var(--black);
     color: var(--white);
     border: 1px solid white;
+    margin-left: auto;
+    margin-right: none;
+}
+
+.page-btn {
+    margin-right: 2vw;
 }
 
 /* Form */
