@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link href = "assets/css/styles.css" rel = "stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <header>My Library</header>
+        <main>
+            <div class = "cards">
+                <div class = "book-card">
+                    <div class="info">
+                        <p>
+                            <span class = "left">Title: </span><span>The way of the Mind</span>
+                        </p>
+                        <p>
+                            <span class = "left">Author:</span><span> Arktetra</span>
+                        </p>
+                        <p>
+                            <span class = "left">Pages:</span><span> 290</span>
+                        </p>
+                        <p>
+                            <span class = "left">Status:</span><span> Read</span>
+                        </p>
+                    </div>
+                    <button class = "remove-btn">Remove</button>
+                </div>
+                <div class = "add-card">
+                    <img src = "assets/images/add.svg" width ="200px">
+                    <p>Add Book</p>
+                </div>
+            </div>
+            <div class = "modal">
+                <form class = "add-book-form">
+                    <p class = "form-title">Add a Book</p>
+                    <hr>
+                    <div class = "title form-content">
+                        <label for = "title">Title:</label>
+                        <input type = "text" id = "title">
+                    </div>
+    
+                    <div class="author form-content">
+                        <label for="author">Author:</label>
+                        <input type="text" id = "author">
+                    </div>
+    
+                    <div class="pages form-content">
+                        <label for="pages">Pages:</label>
+                        <input type="number" id = "pages">
+                    </div>
+    
+                    <div class="status form-content">
+                        <label for="status">Status:</label>
+                        <input type="checkbox" id = "status">
+                    </div>
+
+                    <button type = "submit" class = "golden-submit-btn">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+:root {
+    --gold: #FFD700;
+    --light-gold: #e1b75f;
+    --light-black: #1f1f1f;
+    --card-radius: 6px;
+    --button-radius: 6px;
+
+}
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* layout of main-container */
+.main-container {
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+
+    background-color: var(--light-gold);
+    font-family: "Dancing Script", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+/* main */
+main {
+    background-color: var(--light-black);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+/* cards */
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.book-card {
+    border: 1px solid var(--gold);
+    border-radius: var(--card-radius);
+    width: 241px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    color: white;
+}
+
+.left {
+    color: var(--gold);
+}
+
+.remove-btn {
+    color: var(--gold);
+    background-color: var(--light-black);
+    border: 1px solid silver;
+
+    height: 30px;
+    border-radius: var(--button-radius)
+}
+
+.add-card {
+    background-color: #1f1f1f;
+    border: 1px solid var(--gold);
+    padding: 20px;
+    border-radius: var(--card-radius);
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-card>p {
+    color: white;
+    font-size: 24px;
+}
+
+/* modal */
+.modal {
+    visibility: hidden;
+    position: absolute;
+    display: block;
+    /* left: 50vw; */
+    z-index: 2;
+
+    width: 40vw;
+
+    border: 1px solid var(--gold);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.form-title {
+    color: white;
+    font-size: 24px;
+    font-weight: 700px;
+}
+
+.add-book-form>hr {
+    background-color: var(--gold);
+    border: none;
+    height: 2px;
+    margin-top: 5px;
+}
+
+.form-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 20px 0px;
+}
+
+.form-content label {
+    color: white;
+}
+
+.form-content>input {
+    outline: none;
+    border: 1px solid var(--gold);
+    background-color: var(--light-black);
+    border-radius: 4px;
+    
+    height: 25px;
+}
+
+.golden-submit-btn {
+    background-color: var(--light-black);
+    color: white;
+    border: 1px solid var(--gold);
+    padding: 5px 10px;
+    border-radius: var(--button-radius);
+}
+
+footer {
+    background-color: var(--light-gold);
+}
